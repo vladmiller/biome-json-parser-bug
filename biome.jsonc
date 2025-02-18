@@ -1,0 +1,161 @@
+// Biome replaces eslint and formatting
+// It's faster and easier to configure than eslint
+// Ref: https://biomejs.dev/
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": ["tailwind.css", "styles.css", ".react-router/", "web-agent/app/api", "web-agent/app/api-new"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 120,
+    "lineEnding": "lf"
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noVoid": "error",
+        "noExcessiveCognitiveComplexity": {
+          "level": "error",
+          "options": {
+            "maxAllowedComplexity": 25
+          }
+        },
+        "noUselessStringConcat": "error",
+        "noUselessUndefinedInitialization": "error",
+        "useSimplifiedLogicExpression": "error"
+      },
+      "correctness": {
+        "noConstantMathMinMaxClamp": "error",
+        "noInvalidNewBuiltin": "error",
+        "noNewSymbol": "error",
+        "noUndeclaredVariables": "error",
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "useArrayLiterals": "error",
+        "useHookAtTopLevel": "error",
+        "noSwitchDeclarations": "error"
+      },
+      "nursery": {
+        "noCommonJs": "error",
+        "noEnum": "error",
+        "noSecrets": "error",
+        "noSubstr": "error",
+        "useAtIndex": "error",
+        "noDescendingSpecificity": "error",
+        "noDocumentCookie": "error",
+        "noDuplicateCustomProperties": "error",
+        "noDuplicateElseIf": "error",
+        "noDuplicateProperties": "error",
+        "noDynamicNamespaceImportAccess": "error",
+        "noExportedImports": "error",
+        "noIrregularWhitespace": "error",
+        "noMissingVarFunction": "error",
+        "noNestedTernary": "error",
+        "noOctalEscape": "error",
+        "noProcessEnv": "error",
+        "noStaticElementInteractions": "error",
+        "noTemplateCurlyInString": "error",
+        "noUnknownPseudoClass": "error",
+        "noUnknownPseudoElement": "error",
+        "noUnknownTypeSelector": "error",
+        "noUselessEscapeInRegex": "error",
+        "noUselessStringRaw": "error",
+        "noValueAtRule": "error",
+        "useValidAutocomplete": "error",
+        "useTrimStartEnd": "error",
+        "useStrictMode": "error",
+        "useSortedClasses": "error",
+        "useGuardForIn": "error",
+        "useExplicitType": "error",
+        "useConsistentMemberAccessibility": "error",
+        "useConsistentCurlyBraces": "error",
+        "useComponentExportOnlyModules": "error",
+        "useCollapsedIf": "error",
+        "useAriaPropsSupportedByRole": "error",
+        "useAdjacentOverloadSignatures": "error"
+      },
+      "performance": {
+        "noBarrelFile": "error",
+        "noReExportAll": "error",
+        "useTopLevelRegex": "error"
+      },
+      "style": {
+        "noNamespace": "error",
+        "noNegationElse": "error",
+        "noYodaExpression": "error",
+        "useShorthandArrayType": "error",
+        "useFilenamingConvention": "error",
+        "useFragmentSyntax": "error",
+        "useNamingConvention": {
+          "options": {
+            "strictCase": true,
+            "requireAscii": true
+          },
+          "level": "error"
+        },
+        "useThrowOnlyError": "error",
+        "useThrowNewError": "error",
+        "useShorthandAssign": "error",
+        "useForOf": "error",
+        "useExplicitLengthCheck": "error",
+        "useDefaultSwitchClause": "error",
+        "useConsistentBuiltinInstantiation": "error",
+        "useConsistentArrayType": "error",
+        "useCollapsedElseIf": "error",
+        "useBlockStatements": "error",
+        "noShoutyConstants": "error",
+        "noParameterProperties": "error"
+      },
+      "suspicious": {
+        "noConsoleLog": "error",
+        "noEmptyBlockStatements": "error",
+        "noEvolvingTypes": "error",
+        "useAwait": "error",
+        "useErrorMessage": "error",
+        "useNumberToFixedDigitsArgument": "error"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "asNeeded"
+    },
+    "globals": ["google"]
+  },
+  "json": {
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  },
+  "overrides": [
+    {
+      "include": ["*.stories.tsx"],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "useComponentExportOnlyModules": "off",
+            "useExplicitType": "off"
+          }
+        }
+      }
+    }
+  ]
+}

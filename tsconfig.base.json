@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Base",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "lib": [
+      "ES2023",
+      "dom",
+      "DOM.Iterable",
+      "ES2022",
+    ],
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "strict": true,
+    "allowUnreachableCode": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "inlineSources": false,
+    "preserveWatchOutput": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "useUnknownInCatchVariables": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "strictPropertyInitialization": true,
+    "alwaysStrict": true,
+    "pretty": true,
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
